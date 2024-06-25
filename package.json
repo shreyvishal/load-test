@@ -6,9 +6,9 @@
   "dependencies": {
     "i": "^0.3.7",
     "k6": "^0.0.0",
-    "npm": "^10.8.1"
+    "npm": "^10.8.1",
+    "uuid": "^10.0.0"
   },
-  "devDependencies": {},
   "scripts": {
     "setup": "brew install k6 && mkdir results && mkdir reports",
     "test": "echo \"Error: no test specified\" && exit 1"
