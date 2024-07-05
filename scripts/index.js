@@ -5,35 +5,35 @@ import { dsepJobsTest } from "./dsepJobs.js";
 import { dsepMentoringTest } from "./dsepMentoring.js";
 import { dsepScholarshipsTest } from "./dsepScholarships.js";
 import { retailTest } from "./retail.js";
-
+const i = 5;
 export const options = {
   scenarios: {
     scenario_dsep_jobs: {
       executor: "per-vu-iterations",
-      vus: 1,
-      iterations: 1,
+      vus: 2,
+      iterations: i,
       maxDuration: "20m",
       exec: "scenario_dsep_jobs"
     },
     scenario_dsep_scholarships: {
       executor: "per-vu-iterations",
-      vus: 1,
-      iterations: 1,
+      vus: 2,
+      iterations: i,
       maxDuration: "20m",
       exec: "scenario_dsep_scholarships"
     },
     scenario_dsep_mentoring: {
       executor: "per-vu-iterations",
-      vus: 1,
-      iterations: 1,
+      vus: 3,
+      iterations: i,
       exec: "scenario_dsep_mentoring",
       maxDuration: "20m"
     },
     scenario_retail: {
       executor: "per-vu-iterations",
-      vus: 1,
+      vus: 3,
       exec: "scenario_retail",
-      iterations: 1,
+      iterations: i,
       maxDuration: "20m"
     }
   }
@@ -61,9 +61,9 @@ export function scenario_retail() {
 
 export default function () {
   scenario_dsep_jobs();
-  scenario_mentoring_jobs();
-  scenario_dsep_scholarships();
-  scenario_retail();
+  // scenario_mentoring_jobs();
+  // scenario_dsep_scholarships();
+  // scenario_retail();
 }
 
 export function handleSummary(data) {

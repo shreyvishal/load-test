@@ -5,7 +5,7 @@ export const dsepMentoringSelect = () => {
     context: {
       domain: "dsep:mentoring",
       bpp_id: "bpp-ps-network-sandbox-vistaar.becknprotocol.io",
-      bpp_uri: "http://bpp-ps-network-sandbox-vistaar.becknprotocol.io",
+      bpp_uri: "https://bpp-ps-network-sandbox-vistaar.becknprotocol.io",
       bap_id: "bap-ps-network-vistaar.becknprotocol.io",
       action: "select",
       bap_uri: "https://bap-ps-network-vistaar.becknprotocol.io",
