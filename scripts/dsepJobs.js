@@ -20,7 +20,11 @@ export function dsepJobsTest() {
   check(selectRes, {
     "Success DSEP Jobs Select Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(`Success:${JSON.parse(r.body).responses.length > 0}`);
+        console.log(
+          `Success:${JSON.parse(r.body).context.action}:${
+            JSON.parse(r.body).responses.length > 0
+          }`
+        );
         return JSON.parse(r.body).responses.length > 0;
       }
     }
@@ -36,7 +40,11 @@ export function dsepJobsTest() {
   check(initRes, {
     "Success DSEP Jobs Init Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(`Success:${JSON.parse(r.body).responses.length > 0}`);
+        console.log(
+          `Success:${JSON.parse(r.body).context.action}:${
+            JSON.parse(r.body).responses.length > 0
+          }`
+        );
         return JSON.parse(r.body).responses.length > 0;
       }
     }
@@ -52,7 +60,11 @@ export function dsepJobsTest() {
   check(confirmRes, {
     "Success DSEP Jobs Confirm Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(`Success:${JSON.parse(r.body).responses.length > 0}`);
+        console.log(
+          `Success:${JSON.parse(r.body).context.action}:${
+            JSON.parse(r.body).responses.length > 0
+          }`
+        );
         return JSON.parse(r.body).responses.length > 0;
       }
     }
@@ -68,7 +80,11 @@ export function dsepJobsTest() {
   check(statusRes, {
     "Success DSEP Jobs Status Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(`Success:${JSON.parse(r.body).responses.length > 0}`);
+        console.log(
+          `Success:${JSON.parse(r.body).context.action}:${
+            JSON.parse(r.body).responses.length > 0
+          }`
+        );
         return JSON.parse(r.body).responses.length > 0;
       }
     }

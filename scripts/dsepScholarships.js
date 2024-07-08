@@ -20,7 +20,11 @@ export function dsepScholarshipsTest() {
   check(selectRes, {
     "Success DSEP Scholarships Select Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(`Success:${JSON.parse(r.body).responses.length > 0}`);
+        console.log(
+          `Success:${JSON.parse(r.body).context.action}:${
+            JSON.parse(r.body).responses.length > 0
+          }`
+        );
         return JSON.parse(r.body).responses.length > 0;
       }
     }
@@ -36,7 +40,11 @@ export function dsepScholarshipsTest() {
   check(initRes, {
     "Success DSEP Scholarships Init Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(`Success:${JSON.parse(r.body).responses.length > 0}`);
+        console.log(
+          `Success:${JSON.parse(r.body).context.action}:${
+            JSON.parse(r.body).responses.length > 0
+          }`
+        );
         return JSON.parse(r.body).responses.length > 0;
       }
     }
@@ -52,7 +60,11 @@ export function dsepScholarshipsTest() {
   check(confirmRes, {
     "Success DSEP Scholarships Confirm Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(`Success:${JSON.parse(r.body).responses.length > 0}`);
+        console.log(
+          `Success:${JSON.parse(r.body).context.action}:${
+            JSON.parse(r.body).responses.length > 0
+          }`
+        );
         return JSON.parse(r.body).responses.length > 0;
       }
     }
@@ -68,7 +80,11 @@ export function dsepScholarshipsTest() {
   check(statusRes, {
     "Success DSEP Scholarships Status Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(`Success:${JSON.parse(r.body).responses.length > 0}`);
+        console.log(
+          `Success:${JSON.parse(r.body).context.action}:${
+            JSON.parse(r.body).responses.length > 0
+          }`
+        );
         return JSON.parse(r.body).responses.length > 0;
       }
     }

@@ -61,9 +61,9 @@ export function scenario_retail() {
 
 export default function () {
   scenario_dsep_jobs();
-  // scenario_mentoring_jobs();
-  // scenario_dsep_scholarships();
-  // scenario_retail();
+  scenario_mentoring_jobs();
+  scenario_dsep_scholarships();
+  scenario_retail();
 }
 
 export function handleSummary(data) {
