@@ -20,11 +20,19 @@ export function retailTest() {
   check(selectRes, {
     "Success Retail Select Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(
-          `Success:${JSON.parse(r.body).context.action}:${
-            JSON.parse(r.body).responses.length > 0
-          }`
-        );
+        if (JSON.parse(r.body).responses.length) {
+          console.log(
+            `Success:${JSON.parse(r.body).context.action}:${
+              JSON.parse(r.body).responses.length > 0
+            }, ${r.status}`
+          );
+        } else {
+          console.log(
+            `Retail Failed ${JSON.parse(r.body).context.action} Message Id->${
+              JSON.parse(r.body).context.message_id
+            }`
+          );
+        }
         return JSON.parse(r.body).responses.length > 0;
       }
     }
@@ -40,11 +48,20 @@ export function retailTest() {
   check(initRes, {
     "Success Retail Init Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(
-          `Success:${JSON.parse(r.body).context.action}:${
-            JSON.parse(r.body).responses.length > 0
-          }`
-        );
+        if (JSON.parse(r.body).responses.length) {
+          console.log(
+            `Success:${JSON.parse(r.body).context.action}:${
+              JSON.parse(r.body).responses.length > 0
+            }, ${r.status}`
+          );
+        } else {
+          console.log(
+            `Retail Failed ${JSON.parse(r.body).context.action} Message Id->${
+              JSON.parse(r.body).context.message_id
+            }`
+          );
+        }
+
         return JSON.parse(r.body).responses.length > 0;
       }
     }
@@ -60,11 +77,19 @@ export function retailTest() {
   check(confirmRes, {
     "Success Retail Confirm Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(
-          `Success:${JSON.parse(r.body).context.action}:${
-            JSON.parse(r.body).responses.length > 0
-          }`
-        );
+        if (JSON.parse(r.body).responses.length) {
+          console.log(
+            `Success:${JSON.parse(r.body).context.action}:${
+              JSON.parse(r.body).responses.length > 0
+            }, ${r.status}`
+          );
+        } else {
+          console.log(
+            `Retail Failed ${JSON.parse(r.body).context.action} Message Id->${
+              JSON.parse(r.body).context.message_id
+            }`
+          );
+        }
         return JSON.parse(r.body).responses.length > 0;
       }
     }
@@ -80,11 +105,19 @@ export function retailTest() {
   check(statusRes, {
     "Success Retail Status Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(
-          `Success:${JSON.parse(r.body).context.action}:${
-            JSON.parse(r.body).responses.length > 0
-          }`
-        );
+        if (JSON.parse(r.body).responses.length) {
+          console.log(
+            `Success:${JSON.parse(r.body).context.action}:${
+              JSON.parse(r.body).responses.length > 0
+            }, ${r.status}`
+          );
+        } else {
+          console.log(
+            `Retail Failed ${JSON.parse(r.body).context.action} Message Id->${
+              JSON.parse(r.body).context.message_id
+            }`
+          );
+        }
         return JSON.parse(r.body).responses.length > 0;
       }
     }

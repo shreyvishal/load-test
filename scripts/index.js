@@ -10,28 +10,28 @@ export const options = {
   scenarios: {
     scenario_dsep_jobs: {
       executor: "per-vu-iterations",
-      vus: 2,
+      vus: 25,
       iterations: i,
       maxDuration: "20m",
       exec: "scenario_dsep_jobs"
     },
     scenario_dsep_scholarships: {
       executor: "per-vu-iterations",
-      vus: 2,
+      vus: 50,
       iterations: i,
       maxDuration: "20m",
       exec: "scenario_dsep_scholarships"
     },
     scenario_dsep_mentoring: {
       executor: "per-vu-iterations",
-      vus: 3,
+      vus: 50,
       iterations: i,
       exec: "scenario_dsep_mentoring",
       maxDuration: "20m"
     },
     scenario_retail: {
       executor: "per-vu-iterations",
-      vus: 3,
+      vus: 50,
       exec: "scenario_retail",
       iterations: i,
       maxDuration: "20m"

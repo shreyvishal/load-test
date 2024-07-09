@@ -20,11 +20,19 @@ export function dsepMentoringTest() {
   check(selectRes, {
     "Success DSEP Mentoring Select Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(
-          `Success:${JSON.parse(r.body).context.action}:${
-            JSON.parse(r.body).responses.length > 0
-          }`
-        );
+        if (JSON.parse(r.body).responses.length) {
+          console.log(
+            `Success:${JSON.parse(r.body).context.action}:${
+              JSON.parse(r.body).responses.length > 0
+            }, ${r.status}`
+          );
+        } else {
+          console.log(
+            `DSEP Mentoring Failed ${
+              JSON.parse(r.body).context.action
+            } Message Id->${JSON.parse(r.body).context.message_id}`
+          );
+        }
         return JSON.parse(r.body).responses.length > 0;
       }
     }
@@ -40,11 +48,19 @@ export function dsepMentoringTest() {
   check(initRes, {
     "Success DSEP Mentoring Init Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(
-          `Success:${JSON.parse(r.body).context.action}:${
-            JSON.parse(r.body).responses.length > 0
-          }`
-        );
+        if (JSON.parse(r.body).responses.length) {
+          console.log(
+            `Success:${JSON.parse(r.body).context.action}:${
+              JSON.parse(r.body).responses.length > 0
+            }, ${r.status}`
+          );
+        } else {
+          console.log(
+            `DSEP Mentoring Failed ${
+              JSON.parse(r.body).context.action
+            } Message Id->${JSON.parse(r.body).context.message_id}`
+          );
+        }
         return JSON.parse(r.body).responses.length > 0;
       }
     }
@@ -60,11 +76,19 @@ export function dsepMentoringTest() {
   check(confirmRes, {
     "Success DSEP Mentoring Confirm Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(
-          `Success:${JSON.parse(r.body).context.action}:${
-            JSON.parse(r.body).responses.length > 0
-          }`
-        );
+        if (JSON.parse(r.body).responses.length) {
+          console.log(
+            `Success:${JSON.parse(r.body).context.action}:${
+              JSON.parse(r.body).responses.length > 0
+            }, ${r.status}`
+          );
+        } else {
+          console.log(
+            `DSEP Mentoring Failed ${
+              JSON.parse(r.body).context.action
+            } Message Id->${JSON.parse(r.body).context.message_id}`
+          );
+        }
         return JSON.parse(r.body).responses.length > 0;
       }
     }
@@ -80,11 +104,19 @@ export function dsepMentoringTest() {
   check(statusRes, {
     "Success DSEP Mentoring Status Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(
-          `Success:${JSON.parse(r.body).context.action}:${
-            JSON.parse(r.body).responses.length > 0
-          }`
-        );
+        if (JSON.parse(r.body).responses.length) {
+          console.log(
+            `Success:${JSON.parse(r.body).context.action}:${
+              JSON.parse(r.body).responses.length > 0
+            }, ${r.status}`
+          );
+        } else {
+          console.log(
+            `DSEP Mentoring Failed ${
+              JSON.parse(r.body).context.action
+            } Message Id->${JSON.parse(r.body).context.message_id}`
+          );
+        }
         return JSON.parse(r.body).responses.length > 0;
       }
     }

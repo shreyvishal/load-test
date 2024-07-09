@@ -20,11 +20,19 @@ export function dsepJobsTest() {
   check(selectRes, {
     "Success DSEP Jobs Select Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(
-          `Success:${JSON.parse(r.body).context.action}:${
-            JSON.parse(r.body).responses.length > 0
-          }`
-        );
+        if (JSON.parse(r.body).responses.length) {
+          console.log(
+            `Success:${JSON.parse(r.body).context.action}:${
+              JSON.parse(r.body).responses.length > 0
+            }, ${r.status}`
+          );
+        } else {
+          console.log(
+            `DSEP JOBS Failed ${
+              JSON.parse(r.body).context.action
+            } Message Id->${JSON.parse(r.body).responses}`
+          );
+        }
         return JSON.parse(r.body).responses.length > 0;
       }
     }
@@ -40,11 +48,19 @@ export function dsepJobsTest() {
   check(initRes, {
     "Success DSEP Jobs Init Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(
-          `Success:${JSON.parse(r.body).context.action}:${
-            JSON.parse(r.body).responses.length > 0
-          }`
-        );
+        if (JSON.parse(r.body).responses.length) {
+          console.log(
+            `Success:${JSON.parse(r.body).context.action}:${
+              JSON.parse(r.body).responses.length > 0
+            }, ${r.status}`
+          );
+        } else {
+          console.log(
+            `DSEP JOBS Failed ${
+              JSON.parse(r.body).context.action
+            } Message Id->${JSON.parse(r.body).context.message_id}`
+          );
+        }
         return JSON.parse(r.body).responses.length > 0;
       }
     }
@@ -60,11 +76,19 @@ export function dsepJobsTest() {
   check(confirmRes, {
     "Success DSEP Jobs Confirm Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(
-          `Success:${JSON.parse(r.body).context.action}:${
-            JSON.parse(r.body).responses.length > 0
-          }`
-        );
+        if (JSON.parse(r.body).responses.length) {
+          console.log(
+            `Success:${JSON.parse(r.body).context.action}:${
+              JSON.parse(r.body).responses.length > 0
+            }, ${r.status}`
+          );
+        } else {
+          console.log(
+            `DSEP JOBS Failed ${
+              JSON.parse(r.body).context.action
+            } Message Id->${JSON.parse(r.body).context.message_id}`
+          );
+        }
         return JSON.parse(r.body).responses.length > 0;
       }
     }
@@ -80,11 +104,19 @@ export function dsepJobsTest() {
   check(statusRes, {
     "Success DSEP Jobs Status Call": (r) => {
       if (JSON.parse(r.body).responses) {
-        console.log(
-          `Success:${JSON.parse(r.body).context.action}:${
-            JSON.parse(r.body).responses.length > 0
-          }`
-        );
+        if (JSON.parse(r.body).responses.length) {
+          console.log(
+            `Success:${JSON.parse(r.body).context.action}:${
+              JSON.parse(r.body).responses.length > 0
+            }, ${r.status}`
+          );
+        } else {
+          console.log(
+            `DSEP JOBS Failed ${
+              JSON.parse(r.body).context.action
+            } Message Id->${JSON.parse(r.body).context.message_id}`
+          );
+        }
         return JSON.parse(r.body).responses.length > 0;
       }
     }
