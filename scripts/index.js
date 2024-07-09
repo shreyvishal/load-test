@@ -6,32 +6,44 @@ import { dsepMentoringTest } from "./dsepMentoring.js";
 import { dsepScholarshipsTest } from "./dsepScholarships.js";
 import { retailTest } from "./retail.js";
 const i = 5;
+function divideIntoFourParts(number) {
+  const baseValue = Math.floor(number / 4);
+  const remainder = number % 4;
+  const part1 = baseValue + (remainder >= 1 ? 1 : 0);
+  const part2 = baseValue + (remainder >= 2 ? 1 : 0);
+  const part3 = baseValue + (remainder >= 3 ? 1 : 0);
+  const part4 = baseValue;
+  return [part1, part2, part3, part4];
+}
+
+const vu = divideIntoFourParts();
+
 export const options = {
   scenarios: {
     scenario_dsep_jobs: {
       executor: "per-vu-iterations",
-      vus: 25,
+      vus: vu[0],
       iterations: i,
       maxDuration: "20m",
       exec: "scenario_dsep_jobs"
     },
     scenario_dsep_scholarships: {
       executor: "per-vu-iterations",
-      vus: 50,
+      vus: vu[1],
       iterations: i,
       maxDuration: "20m",
       exec: "scenario_dsep_scholarships"
     },
     scenario_dsep_mentoring: {
       executor: "per-vu-iterations",
-      vus: 50,
+      vus: vu[2],
       iterations: i,
       exec: "scenario_dsep_mentoring",
       maxDuration: "20m"
     },
     scenario_retail: {
       executor: "per-vu-iterations",
-      vus: 50,
+      vus: vu[3],
       exec: "scenario_retail",
       iterations: i,
       maxDuration: "20m"
