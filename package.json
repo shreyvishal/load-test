@@ -11,7 +11,8 @@
   },
   "scripts": {
     "setup": "brew install k6 && mkdir results && mkdir reports",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:test": "k6 run scripts/index.js"
   },
   "author": "",
   "license": "ISC"

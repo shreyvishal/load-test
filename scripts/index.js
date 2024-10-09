@@ -5,7 +5,7 @@ import { dsepJobsTest } from "./dsepJobs.js";
 import { dsepMentoringTest } from "./dsepMentoring.js";
 import { dsepScholarshipsTest } from "./dsepScholarships.js";
 import { retailTest } from "./retail.js";
-const i = 5;
+const i = 5; // Number of Iterations
 function divideIntoFourParts(number) {
   const baseValue = Math.floor(number / 4);
   const remainder = number % 4;
@@ -16,7 +16,7 @@ function divideIntoFourParts(number) {
   return [part1, part2, part3, part4];
 }
 
-const vu = divideIntoFourParts(600);
+const vu = divideIntoFourParts(600); // Number of Virtual Users
 
 export const options = {
   scenarios: {
