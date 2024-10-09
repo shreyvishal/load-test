@@ -16,7 +16,7 @@ function divideIntoFourParts(number) {
   return [part1, part2, part3, part4];
 }
 
-const vu = divideIntoFourParts();
+const vu = divideIntoFourParts(600);
 
 export const options = {
   scenarios: {
@@ -80,6 +80,6 @@ export default function () {
 
 export function handleSummary(data) {
   return {
-    "summary.html": htmlReport(data)
+    "protocol-server.html": htmlReport(data)
   };
 }
